@@ -1,0 +1,289 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.main-nav{
+    width: 200px;
+    height:100%;
+    position:fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+
+    background:#00456A;
+}
+
+.main-nav ul{
+    list-style-type: none;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    padding: 1em;
+    display:inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease-in, border-color 0.3s ease-in;
+    border-right: 5px solid #00456A;
+    padding-left: 2em
+}
+
+.main-nav ul li a:hover{
+    background-color: #008acc;
+    border-color:#fff;
+}
+
+.main-nav ul li a:before{
+    color:#00456A;
+    content:"\f054";
+    font-family: FontAwesome;
+    padding-right: 0.5em;
+    position: absolute;
+    left:-1em;
+    transition: color 0.3s ease-in, left 0.3s, ease-in;
+}
+
+.main-nav ul li a:hover:before{
+    color:#fff;
+    left:1em;
+}
+
+
+.content-wrap{
+    min-height: 100%;
+    min-width: 100%;
+    background-color: #fff;
+    position:relative;
+    top:0;
+    bottom: 100%;
+    left:0;
+    z-index: 1;
+    padding:4em;
+}
+
+.nav-trigger{
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
+
+label[for="nav-trigger"]{
+    position:fixed;
+    left: 15px;
+    top: 15px;
+    z-index: 2;
+
+    height: 30px;
+    width: 30px;
+    coursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+    background-size: contain;
+}
+
+.nav-trigger + label, .content-wrap {
+  transition: left 0.2s;
+}
+
+.nav-trigger:checked + label {
+  left: 215px;
+}
+
+.nav-trigger:checked ~ .content-wrap {
+  left: 200px;
+  box-shadow: 0 0 0 5px rgba(0,0,0,0.3);
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
