@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>The Co-operators Web Styles</title>
+        <meta name="description" content="Guidelines for The Co-operators online look and feel.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/coop-main.css">
+    </head>
+    <body>
+    	
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger"></label>
+        <nav class="main-nav">
+        	<ul>
+        		<li><a href="index.html#intro">Introduction</a></li>
+        		<li><a href="index.html#typography">Typography</a></li>
+        		<li><a href="index.html#colours">Colours</a></li>
+        		<li><a href="index.html#logos">Logos</a></li>
+        		<li><a href="index.html#buttons">Buttons</a></li>
+        		<li><a href="index.html#icons">Icons</a></li>
+        		<li><a href="index.html#forms">Forms</a></li>
+				<li><a href="index.html#other">Other</a></li>
+        		<li><a href="index.html#assets">Assets</a></li>
+        		<li class="active"><a href="analytics.html">Analytics</a></li>
+        	</ul>
+        </nav>
+        
+        
+       
+        <div class="content-wrap">
+        	<h1>Analytics</h1>
+	<h2>Page Tracking</h2>
+		<h3>Google Tag Manager</h3>
+			<p>Google Tag Manager (GTM) should be deployed on all pages. Within GTM, all other analytics codes (Google Analytics, Crazy Egg, etc), rules are added.</p>
+			<p>www.cooperators.ca uses the following GTM code, please <strong><em>ALWAYS</em></strong> contact the <a href="mailto:webmaster@cooperators.ca">webmaster</a> to confirm the correct GTM code to use:
+			<pre class="prettyprint"><code>
+&lt;!-- Google Tag Manager --&gt;
+&lt;noscript&gt;&lt;iframe src=&quot;//www.googletagmanager.com/ns.html?id=GTM-TBJ2G5&quot;
+height=&quot;0&quot; width=&quot;0&quot; style=&quot;display:none;visibility:hidden&quot;&gt;&lt;/iframe&gt;&lt;/noscript&gt;
+&lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src= 
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TBJ2G5');&lt;/script&gt;
+&lt;!-- End Google Tag Manager --&gt;
+			</code></pre>
+			</p>
+		<h3>Page Tracking Tags</h3>
+		<p>All pages must be categorized with <strong>category</strong>,sub category tags are optional. These tagged using meta tags and placed within the head section of the code.</p>
+		<p>Usage:
+			<pre class="prettyprint"><code>
+&lt;head&gt; 
+	&lt;meta name=&quot;coop_section&quot; content=&quot;category name&quot;&gt;
+	&lt;meta name=&quot;coop_sub1&quot; content=&quot;sub category 1 name&quot;&gt; 
+	&lt;meta name=&quot;coop_sub2&quot; content=&quot;sub category 2 name&quot;&gt; 
+	&lt;meta name=&quot;coop_sub3&quot; content=&quot;sub category 3 name&quot;&gt; 
+&lt;/head&gt;
+				</code></pre>
+		</p>
+
+		<p>Example for usage:
+			<pre class="prettyprint"><code>
+&lt;head&gt; 
+	&lt;meta name=&quot;coop_section&quot; content=&quot;insurance&quot;&gt;
+	&lt;meta name=&quot;coop_sub1&quot; content=&quot;life&quot;&gt; 
+&lt;/head&gt;
+				</code></pre></p>
+
+		<p>Sub category is currently limited to coop_sub1, coop_sub2 and coop_sub3.</p>
+
+
+
+	<h2>Event Tracking</h2>
+	<p>To simply tracking, data attributes are used to track events. Any element can be tagged with the event tracking attributes and the event will be captured on element click.</p>
+	<p><pre class="prettyprint"><code>
+&lt;a href=&quot;url&quot; data-coop-event=&quot;coop-event&quot; data-coop-category=&quot;event category&quot; data-coop-action=&quot;event action&quot; data-coop-label=&quot;event label&quot; data-coop-value=&quot;0&quot; &gt;click me!&lt;/a&gt;
+				</code></pre>
+	</p>
+	<p>data-coop-event must be set to "coop-event", data-coop-category and data-coop-action must be set with a value, data-coop-label and data-coop-value are optional.</p>
+	<h2>Custom Dimensions</h2>
+	<h2>Custom Metrics</h2>
+
+	        <footer>This document is maintained by Xiaobo Liu.</footer>
+    	</div>
+
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    </body>
+</html>

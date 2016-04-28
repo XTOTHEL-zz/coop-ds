@@ -57,16 +57,19 @@ textarea {
    ========================================================================== */
 
 .main-nav{
-    width: 200px;
+    width: 100%;
     height:100%;
     position:fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 0;
-
+    z-index: 2;
+    /*display:none;*/
     background:#00456A;
+    padding-top: 4em;
+    opacity:0;
+    transition: opacity 0.1s ease-in;
 }
 
 .main-nav ul{
@@ -85,12 +88,13 @@ textarea {
     box-sizing: border-box;
     transition: background-color 0.3s ease-in, border-color 0.3s ease-in;
     border-right: 5px solid #00456A;
-    padding-left: 2em
+    padding-left: 2em;
+    border-top:solid 1px #008acc;
 }
 
-.main-nav ul li a:hover{
+.main-nav ul li a:hover,.main-nav ul li.active a{
     background-color: #008acc;
-    border-color:#fff;
+    border-right-color:#fff;
 }
 
 .main-nav ul li a:before{
@@ -103,7 +107,7 @@ textarea {
     transition: color 0.3s ease-in, left 0.3s, ease-in;
 }
 
-.main-nav ul li a:hover:before{
+.main-nav ul li a:hover:before, .main-nav ul li.active a:before{
     color:#fff;
     left:1em;
 }
@@ -130,26 +134,23 @@ label[for="nav-trigger"]{
     position:fixed;
     left: 15px;
     top: 15px;
-    z-index: 2;
+    z-index: 3;
 
     height: 30px;
     width: 30px;
     coursor: pointer;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve' fill='#008acc'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
     background-size: contain;
 }
 
-.nav-trigger + label, .content-wrap {
-  transition: left 0.2s;
-}
 
 .nav-trigger:checked + label {
-  left: 215px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve' fill='#fff'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
 }
 
-.nav-trigger:checked ~ .content-wrap {
-  left: 200px;
-  box-shadow: 0 0 0 5px rgba(0,0,0,0.3);
+.nav-trigger:checked ~ .main-nav{
+    display:block;
+    opacity:1;
 }
 
 body{
@@ -157,7 +158,12 @@ body{
 }
 
 
-
+.header{
+    width:100%;
+    background-color: #fff;
+    border-bottom: 1px solid #008acc;
+    height:4em;
+}
 
 
 
