@@ -16,6 +16,10 @@
 	overflow: hidden;
 }
 
+.c-modal .modal-dialog.modal-img .modal-content .modal-header img{
+	float:right;
+}
+
 
 .c-modal .modal-dialog .modal-content .modal-header button.close{
 	color: #fff;
