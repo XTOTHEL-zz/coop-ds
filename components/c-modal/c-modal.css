@@ -1,5 +1,5 @@
 .c-modal{
-	background-color: rgba(255,255,255,0.85);
+	background-color: rgba(0,0,0,0.85);
 }
 
 .c-modal .modal-dialog .modal-content{
@@ -9,12 +9,19 @@
 }
 .c-modal .modal-dialog .modal-content .modal-header{
 	border-bottom: 0;
+	padding:0;
 }
+
+.c-modal .modal-dialog.modal-img .modal-content .modal-header{
+	overflow: hidden;
+}
+
+
 .c-modal .modal-dialog .modal-content .modal-header button.close{
 	color: #fff;
     background-color: #008acc;
     padding: 0.5em;
-    margin-top: -15px;
+    margin: 0 15px 0 0;
     opacity: 1;
     font-weight: 400;
 	text-shadow:none;
@@ -22,22 +29,26 @@
     transition: background-color 0.3s ease-out;
 }
 
+.c-modal .modal-dialog.modal-img .modal-content .modal-header button.close{
+	position: absolute;
+    right: 0;
+}
+
 .c-modal .modal-dialog .modal-content .modal-header button.close .sr-only{
 	height: inherit;
     width: inherit;
-    position: inherit;
+    position: initial;
     display: inline-block;
 	max-width: 0;
 	margin:-2px;
 	line-height: 14px;
-	transition: transform 0.3s linear, max-width 0.3s ease-out;
+	transition: max-width 0.3s ease-out;
 }
 .c-modal .modal-dialog .modal-content .modal-header button.close:hover{
 	background-color: #00456a;
 }
-.c-modal .modal-dialog .modal-content .modal-header button.close:hover .sr-only{
+.c-modal .modal-dialog .modal-content  .modal-header button.close:hover .sr-only{
 	max-width: 50px;
-	transform: scale(1.0);
 
 }
 
