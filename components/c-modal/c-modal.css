@@ -28,6 +28,7 @@
     position: inherit;
     display: inline-block;
 	max-width: 0;
+	margin:-2px;
 	line-height: 14px;
 	transition: transform 0.3s linear, max-width 0.3s ease-out;
 }
