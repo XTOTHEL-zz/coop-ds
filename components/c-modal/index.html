@@ -25,22 +25,34 @@
     			<div class="col-md-12">
     				<h1>Modal</h1>
     				<p><!-- Button trigger modal -->
-					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-					  Launch demo modal
+					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#cModalSm">
+					  Launch small modal
 					</button></p>
 
-					<!-- Modal -->
-					<div class="c-modal modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-					  <div class="modal-dialog" role="document">
+    				<p><!-- Button trigger modal -->
+					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#cModal">
+					  Launch regular modal
+					</button></p>
+
+					<p><!-- Button trigger modal -->
+					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#cModalLg">
+					  Launch large modal
+					</button></p>
+
+
+					<!-- Modal regular -->
+					<div class="c-modal modal fade" id="cModalSm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					  <div class="modal-dialog modal-sm" role="document">
 					    <div class="modal-content">
 
 					      <div class="modal-header">
 					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i> <span class="sr-only">close</span></button>
-					        <h4 class="modal-title sr-only" id="myModalLabel">Modal title</h4>
+					        <h4 class="modal-title sr-only">Modal title</h4>
 					      </div>
 
 					      <div class="modal-body">
-					        ...
+					        	<h2>Small Modal</h2>
+					        	<p>This is a small modal!</p>
 					      </div>
 
 					      <div class="modal-footer">
@@ -51,6 +63,51 @@
 					  </div>
 					</div>
 
+					<!-- Modal regular -->
+					<div class="c-modal modal fade" id="cModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i> <span class="sr-only">close</span></button>
+					        <h4 class="modal-title sr-only">Modal title</h4>
+					      </div>
+
+					      <div class="modal-body">
+					        	<h2>Regular Modal</h2>
+					        	<p>This is a regular modal!</p>
+					      </div>
+
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+					      </div>
+
+					    </div>
+					  </div>
+					</div>
+
+					<!-- Modal Large -->
+					<div class="c-modal modal fade" id="cModalLg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					  <div class="modal-dialog modal-lg" role="document">
+					    <div class="modal-content">
+
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i> <span class="sr-only">close</span></button>
+					        <h4 class="modal-title sr-only">Large Modal Title</h4>
+					      </div>
+
+					      <div class="modal-body">
+					        	<h2>Large Modal</h2>
+					        	<p>This is a large modal!</p>
+					      </div>
+
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+					      </div>
+
+					    </div>
+					  </div>
+					</div>
     			</div>
     		</div>
     	</div>
