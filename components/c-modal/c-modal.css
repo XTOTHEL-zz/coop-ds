@@ -1,0 +1,46 @@
+.c-modal{
+	background-color: rgba(255,255,255,0.85);
+}
+
+.c-modal .modal-dialog .modal-content{
+	border-radius: 0;
+	border:none;
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.24);
+}
+.c-modal .modal-dialog .modal-content .modal-header{
+	border-bottom: 0;
+}
+.c-modal .modal-dialog .modal-content .modal-header button.close{
+	color: #fff;
+    background-color: #008acc;
+    padding: 0.5em;
+    margin-top: -15px;
+    opacity: 1;
+    font-weight: 400;
+	text-shadow:none;
+    font-size: 16px;
+    transition: background-color 0.3s ease-out;
+}
+
+.c-modal .modal-dialog .modal-content .modal-header button.close .sr-only{
+	height: inherit;
+    width: inherit;
+    position: inherit;
+    display: inline-block;
+	max-width: 0;
+	line-height: 14px;
+	transition: transform 0.3s linear, max-width 0.3s ease-out;
+}
+.c-modal .modal-dialog .modal-content .modal-header button.close:hover{
+	background-color: #00456a;
+}
+.c-modal .modal-dialog .modal-content .modal-header button.close:hover .sr-only{
+	max-width: 50px;
+	transform: scale(1.0);
+
+}
+
+.c-modal .modal-dialog .modal-content .modal-footer{
+	border-top: 0;
+	text-align: center;
+}
